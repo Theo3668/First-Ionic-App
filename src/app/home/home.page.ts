@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,17 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  name;
+  id;
+  gender;
+  contact;
 
+  constructor(private route:Router) {}
+
+  onSubit(){
+    console.log(this.name);
+    console.log(this.id);
+    console.log(this.gender);
+    console.log(this.contact);
+  }
 }

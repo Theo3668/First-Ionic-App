@@ -1,14 +1,36 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar color="primary">
+        <ion-title>
+            Ionic Blank
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+    <ion-item>
+        <ion-label>Full Name</ion-label>
+        <ion-input type="text" [(ngModel)]="name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>ID number</ion-label>
+        <ion-input type="number" [(ngModel)]="id"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Gender</ion-label>
+        <ion-select type="text" placeholder="Select One" [(ngModel)]="gender">
+            <ion-select-option value="male">Male</ion-select-option>
+            <ion-select-option value="female">female</ion-select-option>
+        </ion-select>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Contact</ion-label>
+        <ion-input type="number" max="10" [(ngModel)]="contact"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-button color="primary" expand="full" (click)="onSubit()">Submit</ion-button>
+    </ion-item>
 </ion-content>
